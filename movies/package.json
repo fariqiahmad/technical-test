@@ -1,0 +1,29 @@
+{
+  "name": "movies",
+  "version": "1.0.0",
+  "description": "search movies from http://www.omdbapi.com/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fariqiahmad/technical-test.git"
+  },
+  "author": "fariqiahmad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fariqiahmad/technical-test/issues"
+  },
+  "homepage": "https://github.com/fariqiahmad/technical-test#readme",
+  "dependencies": {
+    "config": "^3.3.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.6",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "sequelize": "^6.3.5"
+  }
+}
