@@ -7,6 +7,30 @@
 
 The API can be accessed on [https://omdb-search-movie.herokuapp.com](https://omdb-search-movie.herokuapp.com/api/movies/search?title=spider&apiKey=628194e8)
 
+For testing you can use ```apiKey 628194e8```
+
+### Endpoints
+#### Endpoint /api/movies/search
+```http
+GET /api/movies?apiKey=&title=
+```
+**Supported Query String**
+
+Property | Type | Description
+---------|------|-------------
+apiKey | string | http://www.omdbapi.com/ API Key
+title | string | the movie title you want to search
+
+#### Endpoint /api/movies/:imdbID/detail
+```http
+GET /api/movies/:imdbID/detail?apiKey=
+```
+**Supported Query String**
+
+Property | Type | Description
+---------|------|-------------
+apiKey | string | http://www.omdbapi.com/ API Key
+
 ### Running locally
 Make sure you have [Node](https://nodejs.org/en/) and [MySQL](https://www.mysql.com/) installed.
 
