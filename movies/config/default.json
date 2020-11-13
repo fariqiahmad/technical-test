@@ -1,0 +1,9 @@
+{
+    "api": {
+        "base_url": "localhost://3000"
+    },
+    "omdb": {
+        "base_url": "http://www.omdbapi.com",
+        "api_key": "628194e8"
+    }
+}
