@@ -40,5 +40,6 @@ function anagram(arr) {
     return output
 }
 
+// testing
 var arrayString = ['kita', 'atik', 'tika', 'aku', 'kia', 'makan', 'kua']
 console.log(anagram(arrayString))
