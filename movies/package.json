@@ -4,6 +4,7 @@
   "description": "search movies from http://www.omdbapi.com/",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "mocha 'test/movies.js'"
   },
   "repository": {
