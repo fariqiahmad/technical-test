@@ -5,7 +5,7 @@ const config = require('config')
 const moment = require('moment')
 
 const models = require('../models')
-const sequelize = require('../models').sequelize
+const { sequelize } = require('../models')
 
 const omdbBaseUrl = config.get('omdb.base_url')
 
@@ -132,7 +132,7 @@ exports.getById = async (req, res) => {
             movie = await models.movie.create({
                 title: omdbMovie.Title,
                 year: omdbMovie.Year,
-                release_date: omdbMovie.Release_date,
+                released: omdbMovie.Released,
                 rated: omdbMovie.Rated,
                 runtime: omdbMovie.Runtime,
                 genre: omdbMovie.Genre,
@@ -145,8 +145,8 @@ exports.getById = async (req, res) => {
                 awards: omdbMovie.Awards,
                 poster: omdbMovie.Poster,
                 metascore: omdbMovie.Metascore,
-                imdbRating: omdbMovie.ImdbRating,
-                imdbVotes: omdbMovie.ImdbVotes,
+                imdbRating: omdbMovie.imdbRating,
+                imdbVotes: omdbMovie.imdbVotes,
                 imdbId: omdbMovie.imdbID,
                 type: omdbMovie.Type,
                 dvd: omdbMovie.DVD,
@@ -158,7 +158,7 @@ exports.getById = async (req, res) => {
 
         } else {
             await models.movie.update({
-                release_date: omdbMovie.Release_date,
+                released: omdbMovie.Released,
                 rated: omdbMovie.Rated,
                 runtime: omdbMovie.Runtime,
                 genre: omdbMovie.Genre,
@@ -170,8 +170,8 @@ exports.getById = async (req, res) => {
                 country: omdbMovie.Country,
                 awards: omdbMovie.Awards,
                 metascore: omdbMovie.Metascore,
-                imdbRating: omdbMovie.ImdbRating,
-                imdbVotes: omdbMovie.ImdbVotes,
+                imdbRating: omdbMovie.imdbRating,
+                imdbVotes: omdbMovie.imdbVotes,
                 dvd: omdbMovie.DVD,
                 boxOffice: omdbMovie.BoxOffice,
                 production: omdbMovie.Production,
