@@ -5,18 +5,16 @@ function anagram(arr) {
     let output = []
     // copy the original arr
     let sortedStrArr = [...arr]
-    
+
     for (let i = 0; i < sortedStrArr.length; i++) {
         let arrString = sortedStrArr[i].split('')
         // bubble sort to sort each string
         for (let j = 0; j < arrString.length; j++) {
             for (let k = 0; k < arrString.length - j; k++) {
-                if (arrString[k + 1]) {
-                    if (arrString[k] > arrString[k + 1]) {
-                        let tmp = arrString[k]
-                        arrString[k] = arrString[k + 1]
-                        arrString[k + 1] = tmp
-                    }
+                if (arrString[k + 1] && arrString[k] > arrString[k + 1]) {
+                    let tmp = arrString[k]
+                    arrString[k] = arrString[k + 1]
+                    arrString[k + 1] = tmp
                 }
             }
         }
